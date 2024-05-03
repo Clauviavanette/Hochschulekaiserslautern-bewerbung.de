@@ -10,10 +10,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5dc; /* Hellbraune Hintergrundfarbe */
+            color: #333; /* Dunkelgraue Textfarbe */
         }
         nav {
-            background-color: #333;
-            color: #fff;
+            background-color: #8b4513; /* Dunkelbraune Menü-Hintergrundfarbe */
+            color: #fff; /* Weiße Menütextfarbe */
             padding: 10px;
             text-align: center;
         }
@@ -30,33 +32,46 @@
         section.active {
             display: block;
         }
+        .header {
+            background-color: #8b4513; /* Dunkelbraune Header-Hintergrundfarbe */
+            color: #fff; /* Weiße Header-Textfarbe */
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            max-width: 100px; /* Maximale Breite des Logos */
+            height: auto; /* Automatische Höhe des Logos */
+            margin-bottom: 10px; /* Abstand unter dem Logo */
+        }
     </style>
 </head>
 <body>
+    <!-- Header mit Logo und Willkommensnachricht -->
+    <header class="header">
+        <img src="logo.jpg" alt="PKCV Logo" class="logo">
+        <h1>Willkommen auf PKCV</h1>
+        <p>Dem Ort, an dem Geschichten voller Lebenslektionen und Motivation erzählt werden, während wir uns über Business und Erfolg unterhalten. Tauche ein und lass dich inspirieren!</p>
+    </header>
+
     <!-- Menü -->
     <nav>
         <a href="#" class="menu-link" data-section="about-us">About Us</a>
         <a href="#" class="menu-link" data-section="story-time">Story Time</a>
-        <a href="#" class="menu-link" data-section="business">Business</a>
         <a href="#" class="menu-link" data-section="contact">Contact</a>
     </nav>
 
     <!-- Abschnitte -->
     <section id="about-us" class="active">
         <h2>About Us</h2>
-        <p>Welcome to pkcv-online.com! Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Hier können Sie Informationen über uns finden.</p>
     </section>
     <section id="story-time">
         <h2>Story Time</h2>
-        <p>Once upon a time... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
-    <section id="business">
-        <h2>Business</h2>
-        <p>Our business is... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Hier können Sie unsere Geschichten lesen.</p>
     </section>
     <section id="contact">
         <h2>Contact</h2>
-        <p>Contact us at... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Hier können Sie uns kontaktieren.</p>
     </section>
 
     <script>
