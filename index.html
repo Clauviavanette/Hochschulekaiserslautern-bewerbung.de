@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pkcv-online.com</title>
+    <style>
+        /* Stil für das Menü und die Abschnitte */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+        }
+        section {
+            padding: 20px;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menü -->
+    <nav>
+        <a href="#" class="menu-link" data-section="about-us">About Us</a>
+        <a href="#" class="menu-link" data-section="story-time">Story Time</a>
+        <a href="#" class="menu-link" data-section="business">Business</a>
+        <a href="#" class="menu-link" data-section="contact">Contact</a>
+    </nav>
 
+    <!-- Abschnitte -->
+    <section id="about-us" class="active">
+        <h2>About Us</h2>
+        <p>Welcome to pkcv-online.com! Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+    <section id="story-time">
+        <h2>Story Time</h2>
+        <p>Once upon a time... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+    <section id="business">
+        <h2>Business</h2>
+        <p>Our business is... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Contact us at... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <script>
+        // JavaScript, um zwischen den Abschnitten zu wechseln
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.getAttribute('data-section');
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === sectionId) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
