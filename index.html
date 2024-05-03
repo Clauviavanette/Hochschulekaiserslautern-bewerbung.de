@@ -1,5 +1,5 @@
 
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,6 +44,19 @@
             height: auto; /* Automatische Höhe des Logos */
             margin-bottom: 10px; /* Abstand unter dem Logo */
         }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin-bottom: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -64,14 +77,16 @@
 
     <!-- Abschnitte -->
     <section id="about-us" class="active">
-    <h2>About Us</h2>
-    <p>Welcome to our home, which is now also your home. We're here to share our stories, as inspiring as they are motivating, drawing from real-life experiences. Each story carries a message and a moral. We also delve into our business ventures and share business ideas that might ignite your inspiration. PKCV isn't just a brand; it's a concept. To learn more about our businesses, we invite you to explore our business section, and please don't hesitate to reach out to us. Together, we'll go far. </p>
-    <P>  CHASE DREAMS, WEAR SUCCESS </P>
-        <img src="Your PKCV TEAM " alt="YOUR PKCV TEAM" class="YOUR PKCV TEAM ">
-</section>
+        <h2>About Us</h2>
+        <p>Welcome to our home, which is now also your home. We're here to share our stories, as inspiring as they are motivating, drawing from real-life experiences. Each story carries a message and a moral. We also delve into our business ventures and share business ideas that might ignite your inspiration. PKCV isn't just a brand; it's a concept. To learn more about our businesses, we invite you to explore our business section, and please don't hesitate to reach out to us. Together, we'll go far.</p>
+        <p>CHASE DREAMS, WEAR SUCCESS</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://https://youtu.be/kGgU__cjb-8?si=LN03lfhp-PwdjDYV" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
     <section id="story-time">
         <h2>Story Time</h2>
-        <p>Once upon a time... Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Beautiful stories are on their way, and we can’t wait to share them. 📖.</p>
         <p>Stay tuned for our stories coming soon!</p>
     </section>
     <section id="business">
