@@ -1,142 +1,172 @@
-
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pkcv-online.com</title>
+    <meta name="description" content="Jetzt bewerben: Studium an der Hochschule Kaiserslautern. Alles Wichtige zu Studiengängen, Bewerbungen und Fristen.">
+    <meta name="keywords" content="Studium Kaiserslautern, Hochschule Bewerbung, Informatik Studium Rheinland-Pfalz">
+    <meta name="robots" content="index, follow">
+    <title>Bewerbung - Hochschule Kaiserslautern</title>
     <style>
-        /* Stil für das Menü und die Abschnitte */
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f5f5dc; /* Hellbraune Hintergrundfarbe */
-            color: #333; /* Dunkelgraue Textfarbe */
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            max-height: 60px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
         }
         nav {
-            background-color: #8b4513; /* Dunkelbraune Menü-Hintergrundfarbe */
-            color: #fff; /* Weiße Menütextfarbe */
-            padding: 10px;
+            background-color: #00274d;
+            padding: 1rem;
             text-align: center;
         }
         nav a {
-            color: #fff;
+            color: white;
             text-decoration: none;
-            padding: 10px;
-            margin: 0 5px;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb {
+            background-color: #f1f1f1;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .breadcrumb a {
+            color: #004080;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         section {
-            padding: 20px;
-            display: none;
+            margin-bottom: 2rem;
         }
-        section.active {
-            display: block;
+        h1, h2 {
+            color: #004080;
         }
-        .header {
-            background-color: #8b4513; /* Dunkelbraune Header-Hintergrundfarbe */
-            color: #fff; /* Weiße Header-Textfarbe */
-            padding: 20px;
+        footer {
+            background-color: #00274d;
+            color: white;
+            padding: 1rem;
             text-align: center;
+            margin-top: 20px;
         }
-        .logo {
-            max-width: 100px; /* Maximale Breite des Logos */
-            height: auto; /* Automatische Höhe des Logos */
-            margin-bottom: 10px; /* Abstand unter dem Logo */
+        footer .footer-columns {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
         }
-        .team-image {
-            max-width: 100%; /* Maximale Breite des Bildes */
-            height: auto; /* Automatische Höhe des Bildes */
-            margin-bottom: 20px; /* Abstand unter dem Bild */
+        footer .footer-columns div {
+            flex: 1;
+            margin: 10px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .btn-link {
+            display: inline-block;
+            background-color: #004080;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        .btn-link:hover {
+            background-color: #00274d;
         }
     </style>
 </head>
 <body>
-    <!-- Header mit Logo und Willkommensnachricht -->
-    <header class="header">
-        <img src="logo.jpg" alt="PKCV Logo" class="logo">
-        <h1>Welcome to PKCV</h1>
-        <p>Welcome to PKCV! This is the place where stories brim with life lessons and motivation, all while we engage in discussions about business and success. Take the plunge and let yourself be inspired! ✌️</p>
+    <header>
+        <img src="images/hochschule-logo.png" alt="Logo der Hochschule Kaiserslautern">
+        <h1>Bewerbung an der Hochschule Kaiserslautern</h1>
     </header>
-
-    <!-- Menü -->
     <nav>
-        <a href="#" class="menu-link" data-section="about-us">About Us</a>
-        <a href="#" class="menu-link" data-section="story-time">Story Time</a>
-        <a href="#" class="menu-link" data-section="business">Business</a>
-        <a href="#" class="menu-link" data-section="contact">Contact</a>
+        <a href="#">Studium</a>
+        <a href="#">Forschung</a>
+        <a href="#">Hochschule</a>
+        <a href="#">International</a>
     </nav>
-
-    <!-- Abschnitte -->
-    <section id="about-us" class="active">
-        <h2>About Us</h2>
-        <p>Welcome to our home, which is now also your home. We're here to share our stories, as inspiring as they are motivating, drawing from real-life experiences. Each story carries a message and a moral. We also delve into our business ventures and share business ideas that might ignite your inspiration. PKCV isn't just a brand; it's a concept. To learn more about our businesses, we invite you to explore our business section, and please don't hesitate to reach out to us. Together, we'll go far.</p>
-        <p>CHASE DREAMS, WEAR SUCCESS</p>
-        <img src="team.jpg" alt="Your PKCV TEAM" class="team-image">
-    </section>
-   <section id="story-time">
-    <h2>Story Time</h2>
-    <table>
-        <tr>
-            <td>
-                <button class="tablink" onclick="openStory(event, 'story1')">📜 Story 1</button>
-            </td>
-            <td>
-                <button class="tablink" onclick="openStory(event, 'story2')">📜 Story 2</button>
-            </td>
-            <!-- Weitere Geschichten hier hinzufügen -->
-        </tr>
-    </table>
-
-    <!-- Story 1 -->
-    <div id="story1" class="story-content" style="display:block;">
-        <h3>Once upon a time...</h3>
-        <p>In the vibrant metropolis of Lumina City, there were two friends, Alex and Maya, who embarked on a quest for success. Alex, the early riser, believed in the power of hard work and unwavering integrity. Maya, the risk-taker, thought success was about seizing opportunities, even if it meant bending the rules.</p>
-        <p>Their journey began with bright-eyed optimism and lofty dreams. Alex diligently climbed the corporate ladder, earning respect and admiration every step of the way. Maya, however, took a different route, often cutting corners and making shady deals to get ahead faster.</p>
-        <p>As the years passed, their paths diverged. Alex's reputation soared as he became known as the epitome of ethical success. Meanwhile, Maya's shortcuts led to short-term gains but left a trail of broken trust and damaged relationships in her wake.</p>
-        <p>One fateful day, Lumina City was abuzz with gossip about a prestigious award for business excellence. Both Alex and Maya were nominated, but only one could claim the prize. As they stood on the stage, awaiting the announcement, tension hung in the air like a thick fog.</p>
-        <p>The moment arrived, and the winner was revealed: Alex, the embodiment of integrity and hard work. Maya's face fell, realizing that her unethical practices had cost her the ultimate prize.</p>
-        <p>In the end, Lumina City learned a valuable lesson: true success isn't just about reaching the top; it's about how you get there. Alex's story became legend, inspiring future generations to chase their dreams with honesty and integrity, while Maya's tale served as a cautionary reminder of the pitfalls of taking shortcuts. And so, in the bustling streets of Lumina City, the legend of Alex and Maya lived on, a timeless tale of ambition, integrity, and the pursuit of true success.</p>
+    <div class="breadcrumb">
+        <a href="#">Startseite</a> &gt; <a href="#">Master</a> &gt; <a href="#">Wirtschaft und Recht</a> &gt; Bewerbung
     </div>
-
-    <!-- Story 2 - Hier können weitere Geschichten hinzugefügt werden -->
-    <div id="story2" class="story-content" style="display:none;">
-        <h3>Story 2</h3>
-        <p>Hier könnte die zweite Geschichte stehen...</p>
-    </div>
-
-    <!-- Weitere Geschichten können hier hinzugefügt werden -->
-</section>
-   
-    <section id="business">
-        <h2>Business</h2>
-        <p>Get ready for an exciting reveal! We’re about to unveil our business venture and a treasure trove of innovative ideas. Join us, support our journey, and let inspiration strike! Stay tuned! 🌟 .</p>
-        <p>More information about our business coming soon!</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Do you have any questions or want to get in touch? Feel free to contact us!</p>
-        <p>Email: info@pkcv-online.com</p>
-        <p>Phone: +1234567890</p>
-    </section>
-
-    <script>
-        // JavaScript, um zwischen den Abschnitten zu wechseln
-        const menuLinks = document.querySelectorAll('.menu-link');
-
-        menuLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const sectionId = link.getAttribute('data-section');
-                const sections = document.querySelectorAll('section');
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                    if (section.id === sectionId) {
-                        section.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
+    <main>
+        <h2>Wirtschaft und Recht</h2>
+        <section>
+            <h3>Wie bewerbe ich mich?</h3>
+            <p>Bewerbungen sind ab sofort über das Bewerbungsportal der Hochschule möglich. Folgen Sie dem untenstehenden Link, um Ihre Bewerbung einzureichen:</p>
+            <a href="https://hs-kl.de/studium/bewerbung-einschreibung" class="btn-link">Zum Bewerbungsportal</a>
+        </section>
+        <section>
+            <h3>Wichtige Hinweise</h3>
+            <ul>
+                <li>Prüfen Sie, ob Sie alle notwendigen Unterlagen vorbereitet haben.</li>
+                <li>Beachten Sie die Bewerbungsfristen.</li>
+                <li>Kontaktieren Sie uns bei Fragen oder Unklarheiten.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-columns">
+            <div>
+                <h3>Kontakt</h3>
+                <p>Hochschule Kaiserslautern<br>Schoenstr. 5, 67659 Kaiserslautern</p>
+                <p>Email: <a href="mailto:presse@hs-kl.de">presse@hs-kl.de</a><br>Telefon: +49 631 3724-0</p>
+            </div>
+            <div>
+                <h3>Schnellzugriff</h3>
+                <ul>
+                    <li><a href="#">Stellenangebote</a></li>
+                    <li><a href="#">Semestertermine</a></li>
+                    <li><a href="#">Mensa</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Barrierefreiheit</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2025 Hochschule Kaiserslautern. Alle Rechte vorbehalten.</p>
+    </footer>
 </body>
 </html>
+
