@@ -1,29 +1,59 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { useEffect } from "react";
 
-const Header = () => (
-  <header className="bg-[#D4A373] text-white p-4 flex justify-between items-center shadow-md fixed top-0 w-full z-10">
-    <div className="flex items-center">
-      <img src="https://www.europaeischer-kulturpark.de/_Resources/Static/Packages/Newland.BaseTheme/images/logo-kulturpark.png" alt="Logo" className="h-12" />
-    </div>
-    <nav className="flex space-x-6">
-      <Link to="/" className="hover:underline">Startseite</Link>
-      <Link to="/besuch" className="hover:underline">Besuch</Link>
-      <Link to="/erlebnisse" className="hover:underline">Erlebnisse</Link>
-      <Link to="/kontakt" className="hover:underline">Kontakt</Link>
-    </nav>
-  </header>
-);
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { FiMenu } from "react-icons/fi";
+
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <header className="bg-[#D4A373] text-white p-4 flex justify-between items-center shadow-md fixed top-0 w-full z-10">
+      <div className="flex items-center">
+        <img src="https://www.europaeischer-kulturpark.de/_Resources/Static/Packages/Newland.BaseTheme/images/logo-kulturpark.png" alt="Logo" className="h-12" />
+      </div>
+      <nav className="hidden md:flex space-x-6">
+        <Link to="/" className="hover:underline">Startseite</Link>
+        <div className="relative group">
+          <button className="hover:underline">Besuch</button>
+          <div className="absolute hidden group-hover:block bg-white text-black p-2 shadow-md">
+            <Link to="/besuch" className="block p-2 hover:bg-gray-200">Besuchsinformationen</Link>
+            <Link to="/besuch/oeffnungszeiten" className="block p-2 hover:bg-gray-200">Öffnungszeiten</Link>
+          </div>
+        </div>
+        <div className="relative group">
+          <button className="hover:underline">Erlebnisse</button>
+          <div className="absolute hidden group-hover:block bg-white text-black p-2 shadow-md">
+            <Link to="/erlebnisse" className="block p-2 hover:bg-gray-200">Erlebnisangebote</Link>
+            <Link to="/erlebnisse/veranstaltungen" className="block p-2 hover:bg-gray-200">Veranstaltungen</Link>
+          </div>
+        </div>
+        <Link to="/kontakt" className="hover:underline">Kontakt</Link>
+      </nav>
+      <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+        <FiMenu size={24} />
+      </button>
+      {menuOpen && (
+        <div className="absolute top-16 left-0 w-full bg-[#D4A373] text-white flex flex-col items-center space-y-4 p-4">
+          <Link to="/" onClick={() => setMenuOpen(false)}>Startseite</Link>
+          <Link to="/besuch" onClick={() => setMenuOpen(false)}>Besuch</Link>
+          <Link to="/erlebnisse" onClick={() => setMenuOpen(false)}>Erlebnisse</Link>
+          <Link to="/kontakt" onClick={() => setMenuOpen(false)}>Kontakt</Link>
+        </div>
+      )}
+    </header>
+  );
+};
 
 const Home = () => (
   <main className="text-center bg-[#F8F3EC] pt-24 p-6">
-    <img src="https://www.europaeischer-kulturpark.de/_Resources/Persistent/33e37a036683a5197e24ae65f5808cb6f391d8f1/Startseite-1600x1067.jpg" alt="Kulturpark" className="w-full rounded-lg shadow-lg" />
-    <h2 className="text-4xl font-bold mt-6 text-[#6A4823]">EUROPÄISCHER KULTURPARK</h2>
-    <p className="mt-4 text-lg text-[#6A4823] max-w-3xl mx-auto">
-      Eingebettet in das idyllische Tal der Blies, im Herzen des UNESCO Biosphärenreservats Bliesgau, bietet der Europäische Kulturpark ein einzigartiges Erlebnis.
-    </p>
-    <button className="mt-6 bg-[#6A4823] text-white py-2 px-4 rounded-md shadow-md hover:bg-[#5a3e1f]">Mehr erfahren</button>
+    <div className="relative">
+      <img src="https://www.europaeischer-kulturpark.de/_Resources/Persistent/33e37a036683a5197e24ae65f5808cb6f391d8f1/Startseite-1600x1067.jpg" alt="Kulturpark" className="w-full rounded-lg shadow-lg" />
+      <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white p-6">
+        <h2 className="text-4xl font-bold">EUROPÄISCHER KULTURPARK</h2>
+        <p className="mt-4 max-w-3xl">Eingebettet in das idyllische Tal der Blies, im Herzen des UNESCO Biosphärenreservats Bliesgau, bietet der Europäische Kulturpark ein einzigartiges Erlebnis.</p>
+        <button className="mt-6 bg-[#F4A261] text-white py-2 px-6 rounded-md shadow-md hover:bg-[#E76F51]">Mehr erfahren</button>
+      </div>
+    </div>
   </main>
 );
 
@@ -52,6 +82,9 @@ const Kontakt = () => (
 const Footer = () => (
   <footer className="bg-[#D4A373] text-white text-center p-4 mt-6">
     <p>&copy; 2025 Europäischer Kulturpark. Alle Rechte vorbehalten.</p>
+    <div className="mt-2 flex justify-center space-x-4">
+      <a href="https://www.facebook.com/Europaeischer.Kulturpark" className="hover:underline">Facebook</a>
+    </div>
   </footer>
 );
 
