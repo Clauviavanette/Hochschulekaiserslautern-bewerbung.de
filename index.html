@@ -1,174 +1,73 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { useEffect } from "react";
 
-  <!DOCTYPE html>
-<html lang="de">
-<head>
-  <script src="https://analytics.ahrefs.com/analytics.js" data-key="LwjNOWmohm+4szTtB2LKvQ" async></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jetzt bewerben: Studium an der Hochschule Kaiserslautern. Alles Wichtige zu Studiengängen, Bewerbungen und Fristen.">
-    <meta name="keywords" content="Studium Kaiserslautern, Hochschule Bewerbung, Informatik Studium Rheinland-Pfalz">
-    <meta name="robots" content="index, follow">
-    <title>Bewerbung - Hochschule Kaiserslautern</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #004080;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            position: relative;
-        }
-        header img {
-            max-height: 60px;
-            position: absolute;
-            left: 10px;
-            top: 10px;
-        }
-        nav {
-            background-color: #00274d;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .breadcrumb {
-            background-color: #f1f1f1;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            color: #555;
-        }
-        .breadcrumb a {
-            color: #004080;
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        h1, h2 {
-            color: #004080;
-        }
-        footer {
-            background-color: #00274d;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            margin-top: 20px;
-        }
-        footer .footer-columns {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        footer .footer-columns div {
-            flex: 1;
-            margin: 10px;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .btn-link {
-            display: inline-block;
-            background-color: #004080;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
-        }
-        .btn-link:hover {
-            background-color: #00274d;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img src="hochschule-logo.png" alt="Logo der Hochschule Kaiserslautern">
-        <h1>Bewerbung an der Hochschule Kaiserslautern</h1>
-    </header>
-    <nav>
-        <a href="https://hs-kl.de/studium">Studium</a>
-        <a href="https://hs-kl.de/forschung">Forschung</a>
-        <a href="https://hs-kl.de/hochschule">Hochschule</a>
-        <a href="https://hs-kl.de/international">International</a>
-    </nav>
-    <div class="breadcrumb">
-        <a href="https://hs-kl.de/">Startseite</a> &gt; <a href="https://hs-kl.de/master">Master</a> &gt; <a href="https://hs-kl.de/wirtschaft-und-recht">Wirtschaft und Recht</a> &gt; Bewerbung
+const Header = () => (
+  <header className="bg-[#D4A373] text-white p-4 flex justify-between items-center">
+    <div className="flex items-center">
+      <img src="https://www.europaeischer-kulturpark.de/_Resources/Static/Packages/Newland.BaseTheme/images/logo-kulturpark.png" alt="Logo" className="h-12" />
     </div>
-    <main>
-        <h2>Wirtschaft und Recht</h2>
-        <section>
-            <h3>Wie bewerbe ich mich?</h3>
-            <p>Bewerbungen sind ab sofort über das Bewerbungsportal der Hochschule möglich. Folgen Sie dem untenstehenden Link, um Ihre Bewerbung einzureichen:</p>
-            <a href="https://hs-kl.de/studium/bewerbung-einschreibung" class="btn-link">Zum Bewerbungsportal</a>
-        </section>
-        <section>
-            <h3>Wichtige Hinweise</h3>
-            <ul>
-                <li>Prüfen Sie, ob Sie alle notwendigen Unterlagen vorbereitet haben.</li>
-                <li>Beachten Sie die Bewerbungsfristen.</li>
-                <li>Kontaktieren Sie uns bei Fragen oder Unklarheiten.</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-columns">
-            <div>
-                <h3>Kontakt</h3>
-                <p>Hochschule Kaiserslautern<br>Schoenstr. 5, 67659 Kaiserslautern</p>
-                <p>Email: <a href="mailto:presse@hs-kl.de">presse@hs-kl.de</a><br>Telefon: +49 631 3724-0</p>
-            </div>
-            <div>
-                <h3>Schnellzugriff</h3>
-                <ul>
-                    <li><a href="https://hs-kl.de/stellenangebote">Stellenangebote</a></li>
-                    <li><a href="https://hs-kl.de/semestertermine">Semestertermine</a></li>
-                    <li><a href="https://hs-kl.de/mensa">Mensa</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Links</h3>
-                <ul>
-                    <li><a href="https://hs-kl.de/impressum">Impressum</a></li>
-                    <li><a href="https://hs-kl.de/datenschutz">Datenschutz</a></li>
-                    <li><a href="https://hs-kl.de/barrierefreiheit">Barrierefreiheit</a></li>
-                </ul>
-            </div>
-        </div>
-        <p>&copy; 2025 Hochschule Kaiserslautern. Alle Rechte vorbehalten.</p>
-    </footer>
-</body>
-</html>
- 
+    <nav>
+      <Link to="/" className="mx-2 hover:underline">Startseite</Link>
+      <Link to="/besuch" className="mx-2 hover:underline">Besuch</Link>
+      <Link to="/erlebnisse" className="mx-2 hover:underline">Erlebnisse</Link>
+      <Link to="/kontakt" className="mx-2 hover:underline">Kontakt</Link>
+    </nav>
+  </header>
+);
+
+const Home = () => (
+  <main className="text-center bg-[#F8F3EC] p-6">
+    <img src="https://www.europaeischer-kulturpark.de/_Resources/Persistent/33e37a036683a5197e24ae65f5808cb6f391d8f1/Startseite-1600x1067.jpg" alt="Kulturpark" className="w-full" />
+    <h2 className="text-3xl font-bold mt-6 text-[#6A4823]">EUROPÄISCHER KULTURPARK</h2>
+    <p className="mt-4 text-[#6A4823]">Eingebettet in das idyllische Tal der Blies, im Herzen des UNESCO Biosphärenreservats Bliesgau.</p>
+  </main>
+);
+
+const Besuch = () => (
+  <main className="text-center p-6 bg-[#F8F3EC]">
+    <h2 className="text-2xl font-bold text-[#6A4823]">Besuchsinformationen</h2>
+    <img src="https://www.europaeischer-kulturpark.de/_Resources/Persistent/50c43947638410527de5775744db35460cc0251c/Reitermaske-700x470.jpg" alt="Besuch" className="w-full mt-4" />
+  </main>
+);
+
+const Erlebnisse = () => (
+  <main className="text-center p-6 bg-[#F8F3EC]">
+    <h2 className="text-2xl font-bold text-[#6A4823]">Erlebnisse</h2>
+  </main>
+);
+
+const Kontakt = () => (
+  <main className="text-center p-6 bg-[#F8F3EC]">
+    <h2 className="text-2xl font-bold text-[#6A4823]">Kontakt</h2>
+    <p>Telefon: +49 6843 900211</p>
+    <p>Email: <a href="mailto:info@europaeischer-kulturpark.de" className="text-blue-600 hover:underline">info@europaeischer-kulturpark.de</a></p>
+  </main>
+);
+
+const Footer = () => (
+  <footer className="bg-[#D4A373] text-white text-center p-4 mt-6">
+    <p>&copy; 2025 Europäischer Kulturpark. Alle Rechte vorbehalten.</p>
+  </footer>
+);
+
+const App = () => {
+  useEffect(() => {
+    document.title = "Europäischer Kulturpark";
+  }, []);
+
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/besuch" element={<Besuch />} />
+        <Route path="/erlebnisse" element={<Erlebnisse />} />
+        <Route path="/kontakt" element={<Kontakt />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
+};
+
+export default App;
