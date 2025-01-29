@@ -3,45 +3,49 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const Header = () => (
-  <header className="bg-[#D4A373] text-white p-4 flex justify-between items-center">
+  <header className="bg-[#D4A373] text-white p-4 flex justify-between items-center shadow-md fixed top-0 w-full z-10">
     <div className="flex items-center">
       <img src="https://www.europaeischer-kulturpark.de/_Resources/Static/Packages/Newland.BaseTheme/images/logo-kulturpark.png" alt="Logo" className="h-12" />
     </div>
-    <nav>
-      <Link to="/" className="mx-2 hover:underline">Startseite</Link>
-      <Link to="/besuch" className="mx-2 hover:underline">Besuch</Link>
-      <Link to="/erlebnisse" className="mx-2 hover:underline">Erlebnisse</Link>
-      <Link to="/kontakt" className="mx-2 hover:underline">Kontakt</Link>
+    <nav className="flex space-x-6">
+      <Link to="/" className="hover:underline">Startseite</Link>
+      <Link to="/besuch" className="hover:underline">Besuch</Link>
+      <Link to="/erlebnisse" className="hover:underline">Erlebnisse</Link>
+      <Link to="/kontakt" className="hover:underline">Kontakt</Link>
     </nav>
   </header>
 );
 
 const Home = () => (
-  <main className="text-center bg-[#F8F3EC] p-6">
-    <img src="https://www.europaeischer-kulturpark.de/_Resources/Persistent/33e37a036683a5197e24ae65f5808cb6f391d8f1/Startseite-1600x1067.jpg" alt="Kulturpark" className="w-full" />
-    <h2 className="text-3xl font-bold mt-6 text-[#6A4823]">EUROPÄISCHER KULTURPARK</h2>
-    <p className="mt-4 text-[#6A4823]">Eingebettet in das idyllische Tal der Blies, im Herzen des UNESCO Biosphärenreservats Bliesgau.</p>
+  <main className="text-center bg-[#F8F3EC] pt-24 p-6">
+    <img src="https://www.europaeischer-kulturpark.de/_Resources/Persistent/33e37a036683a5197e24ae65f5808cb6f391d8f1/Startseite-1600x1067.jpg" alt="Kulturpark" className="w-full rounded-lg shadow-lg" />
+    <h2 className="text-4xl font-bold mt-6 text-[#6A4823]">EUROPÄISCHER KULTURPARK</h2>
+    <p className="mt-4 text-lg text-[#6A4823] max-w-3xl mx-auto">
+      Eingebettet in das idyllische Tal der Blies, im Herzen des UNESCO Biosphärenreservats Bliesgau, bietet der Europäische Kulturpark ein einzigartiges Erlebnis.
+    </p>
+    <button className="mt-6 bg-[#6A4823] text-white py-2 px-4 rounded-md shadow-md hover:bg-[#5a3e1f]">Mehr erfahren</button>
   </main>
 );
 
 const Besuch = () => (
-  <main className="text-center p-6 bg-[#F8F3EC]">
-    <h2 className="text-2xl font-bold text-[#6A4823]">Besuchsinformationen</h2>
-    <img src="https://www.europaeischer-kulturpark.de/_Resources/Persistent/50c43947638410527de5775744db35460cc0251c/Reitermaske-700x470.jpg" alt="Besuch" className="w-full mt-4" />
+  <main className="text-center pt-24 p-6 bg-[#F8F3EC]">
+    <h2 className="text-3xl font-bold text-[#6A4823]">Besuchsinformationen</h2>
+    <img src="https://www.europaeischer-kulturpark.de/_Resources/Persistent/50c43947638410527de5775744db35460cc0251c/Reitermaske-700x470.jpg" alt="Besuch" className="w-full mt-4 rounded-lg shadow-lg" />
   </main>
 );
 
 const Erlebnisse = () => (
-  <main className="text-center p-6 bg-[#F8F3EC]">
-    <h2 className="text-2xl font-bold text-[#6A4823]">Erlebnisse</h2>
+  <main className="text-center pt-24 p-6 bg-[#F8F3EC]">
+    <h2 className="text-3xl font-bold text-[#6A4823]">Erlebnisse</h2>
+    <p className="mt-4 text-lg text-[#6A4823]">Entdecken Sie spannende Aktivitäten im Kulturpark.</p>
   </main>
 );
 
 const Kontakt = () => (
-  <main className="text-center p-6 bg-[#F8F3EC]">
-    <h2 className="text-2xl font-bold text-[#6A4823]">Kontakt</h2>
-    <p>Telefon: +49 6843 900211</p>
-    <p>Email: <a href="mailto:info@europaeischer-kulturpark.de" className="text-blue-600 hover:underline">info@europaeischer-kulturpark.de</a></p>
+  <main className="text-center pt-24 p-6 bg-[#F8F3EC]">
+    <h2 className="text-3xl font-bold text-[#6A4823]">Kontakt</h2>
+    <p className="mt-2 text-lg text-[#6A4823]">Telefon: +49 6843 900211</p>
+    <p className="mt-2 text-lg text-[#6A4823]">Email: <a href="mailto:info@europaeischer-kulturpark.de" className="text-blue-600 hover:underline">info@europaeischer-kulturpark.de</a></p>
   </main>
 );
 
